@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e8eaf6, #c5cae9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.login-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-container:hover {
+    transform: translateY(0px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #273B09;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #273B09;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #239255;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #1e7f48;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(123, 144, 75, 0.5);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #239255;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1e7f48;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #239255;
+    transform: translateY(0); 
+}
+
+.signup-prompt {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-prompt a {
+    color: #239255;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #D32F2F;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.login-prompt{
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+.login-prompt a {
+    color: #239255;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .login-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
