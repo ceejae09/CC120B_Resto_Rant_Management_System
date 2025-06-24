@@ -1,4 +1,3 @@
-
 # 🍽️ Resto Rant Management System
 
 This project is a **Restaurant and Rage Room Management System**, supporting room bookings, food orders, and user transactions. Below is a full reference of the SQL database schema used in this project.

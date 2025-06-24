@@ -82,10 +82,11 @@ $conn->close();
             align-items: center;
             height: 100vh;
             margin: 0;
+             background-image: url('./img/l.jpg');
         }
 
         .login-container {
-            background: #ffffff;
+           
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;

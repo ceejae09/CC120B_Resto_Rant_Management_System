@@ -65,7 +65,7 @@ $room_id = $roomData['room_id'] ?? 0;
   <title>Order Foods</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+    body { font-family: Arial, sans-serif; margin: 0;  background: #f5f5f5; }
     h2 { margin: 40px 0 20px; text-align: center; }
     table { width: 100%; border-collapse: collapse; background: white; }
     th, td { padding: 12px 15px; border: 1px solid #ccc; text-align: center; }
