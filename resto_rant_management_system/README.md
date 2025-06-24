@@ -1,6 +1,6 @@
 # 🍽️ Resto Rant Management System
 
-This project is a **Restaurant and Rage Room Management System**, supporting room bookings, food orders, and user transactions. Below is a full reference of the SQL database schema used in this project.
+This project is a **Restaurant and Rage Room Management System**, supporting room bookings, food orders, testimonials, and user transactions. Below is a full reference of the SQL database schema used in this project.
 
 ---
 
@@ -13,7 +13,7 @@ USE resto_rant_management_system;
 
 ---
 
-## 🏨 Table: `rooms`
+## 🏨 Table: `rage_rooms`
 
 Stores information about rooms available for booking or rage room use.
 
@@ -34,7 +34,7 @@ CREATE TABLE rage_rooms (
 
 ---
 
-## 🍔 Table: `items`
+## 🍔 Table: `resto_menu`
 
 Stores all menu items available to order.
 
@@ -96,7 +96,7 @@ CREATE TABLE transactions (
 
 ---
 
-## 🧾 Table: `ordered_foods`
+## 🧽 Table: `ordered_foods`
 
 Tracks food orders tied to transactions.
 
@@ -138,6 +138,24 @@ CREATE TABLE history_transactions (
 
 ---
 
+## 💬 Table: `testimonials`
+
+User-submitted testimonials with ratings and timestamps.
+
+```sql
+CREATE TABLE testimonials (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    username VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    rating INT(1) NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    message TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    FOREIGN KEY (username) REFERENCES users(username)
+);
+```
+
+---
+
 ## 🛠 Recommendations
 
 - Always hash passwords using strong algorithms like `bcrypt`.
@@ -152,3 +170,4 @@ CREATE TABLE history_transactions (
 - Add `updated_at` and `deleted_at` timestamps for better record tracking.
 - Normalize tables to reduce redundant data.
 - Implement triggers or stored procedures for automatic archiving.
+
